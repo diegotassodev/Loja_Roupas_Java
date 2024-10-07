@@ -61,16 +61,16 @@ public class Loja {
                 // Switch com as opções no banco de dados de roupas
                 switch (escolhaRoupa) {
                     case 0:
-                        admin.visualizarBancoDeDadosRoupas(); // Supondo que há um método para visualizar roupas
+                        admin.visualizarBancoDeDadosRoupas();
                         break;
                     case 1:
-                        admin.adicionarRoupa(); // Supondo que há um método para adicionar roupa
+                        admin.adicionarRoupa();
                         break;
                     case 2:
-                        admin.editarRoupa(); // Supondo que há um método para editar roupa
+                        admin.editarRoupa(); 
                         break;
                     case 3:
-                        admin.deletarRoupa(); // Supondo que há um método para deletar roupa
+                        admin.deletarRoupa();
                         break;
                     default:
                         JOptionPane.showMessageDialog(null, "Opção inválida!", "Erro", JOptionPane.ERROR_MESSAGE);
