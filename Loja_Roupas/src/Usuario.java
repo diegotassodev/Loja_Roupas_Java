@@ -10,8 +10,8 @@ public class Usuario {
     private String genero;
     private double saldo;
     private Calendar data_nascimento;
-    private int cpf;
-    private int telefone;
+    private String cpf;
+    private String telefone;
     private String tipo_usuario;
     
     // Construtora
@@ -76,19 +76,19 @@ public class Usuario {
         this.data_nascimento = data_nascimento;
     }
 
-    public int getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(int cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
-    public int getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(int telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 
@@ -99,4 +99,5 @@ public class Usuario {
     public void setTipo_usuario(String tipo_usuario) {
         this.tipo_usuario = tipo_usuario;
     }
+    
 }
