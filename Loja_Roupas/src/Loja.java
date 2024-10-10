@@ -58,10 +58,10 @@ public class Loja {
                     continue; 
                 }
                 
-                // Switch com as opções no banco de dados de roupas
+                // Switch com as opções no banco de dados de roupas 
                 switch (escolhaRoupa) {
                     case 0:
-                        admin.visualizarBancoDeDadosRoupas();
+                        admin.visualizarBancoDeDadosRoupa();
                         break;
                     case 1:
                         admin.adicionarRoupa();
