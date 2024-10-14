@@ -1,3 +1,6 @@
+import parentes_roupas.Roupas;
+import parentes_usuario.Usuario;
+import parentes_usuario.Admin;
 import javax.swing.JOptionPane;
 
 public class Loja {

@@ -1,3 +1,6 @@
+package parentes_usuario;
+
+import parentes_roupas.Roupas;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -123,7 +126,7 @@ public class Admin extends Usuario {
         }
     }
     
-    // Método para buscar o usuário pelo ID, essencial para edição e remoção
+    // Método para buscar o usuário pelo ID
     public Usuario buscarUsuarioPorId(int id) {
         for (Usuario usuario : bancoDeDadosUsuarios) {
             if (usuario.getId() == id) {
@@ -152,7 +155,7 @@ public class Admin extends Usuario {
             // Opções de campos para o administrador editar
             String[] campos = {"Nome", "Email", "Senha", "Gênero", "Saldo", "Data de Nascimento", "CPF", "Telefone", "Tipo de Usuário"};
 
-            // Apresenta as opções para o adm escolher qual campo deseja editar
+            // Apresenta as opções para escolher qual campo deseja editar
             String campoSelecionado = (String) JOptionPane.showInputDialog(null, "Selecione o campo que deseja editar:", "Editar Usuário", JOptionPane.QUESTION_MESSAGE, null, campos, campos[0]);
 
             // Verifica o campo selecionado e permite a edição do mesmo
@@ -351,7 +354,7 @@ public class Admin extends Usuario {
             // Apresenta as opções para o admin escolher qual campo deseja editar
             String campoSelecionado = (String) JOptionPane.showInputDialog(null, "Selecione o campo que deseja editar:", "Editar Roupa", JOptionPane.QUESTION_MESSAGE, null, campos, campos[0]);
 
-            // Verifica o campo selecionado e permite a edição do mesmo
+            // Verifica o campo selecionado e permite a edição.
             switch (campoSelecionado) {
                 case "Nome":
                     String novoNome = JOptionPane.showInputDialog("Digite o novo nome da roupa:");
