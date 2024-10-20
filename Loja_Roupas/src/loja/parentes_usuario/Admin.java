@@ -7,6 +7,7 @@ import java.util.List;
 import javax.swing.JOptionPane;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Admin extends Usuario {
     
@@ -31,6 +32,46 @@ public class Admin extends Usuario {
     public void setIdFuncionario(int idFuncionario) {
         this.idFuncionario = idFuncionario;
     } 
+
+    // Método para criar roupas
+
+    public void criarRoupa(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Qual tipo de roupa você deseja criar ?");
+        System.out.println("[1] Calça");
+        System.out.println("[2] Casaco");
+        System.out.println("[3] Camisa");
+        System.out.println("[4] Tênis");
+        int escolha = scanner.nextInt();
+
+        System.out.println("Insira o número da roupa");
+        int numero = scanner.nextInt();
+
+        Roupas roupa = null;
+        switch(escolha){
+            case 1:
+            roupa = new Calca(numero);
+            break;
+        case 2:
+            roupa = new Casaco(numero);
+            break;
+        case 3:
+            roupa = new Camisa(numero);
+            break;
+        case 4:
+            roupa = new Tenis(numero);
+            break;
+        default:
+            System.out.println("Opção inválida.");
+        }
+
+        if (roupa != null){
+            bancoDeDadosRoupas.add(roupa);
+            System.out.println("Roupa criada e adicionada ao banco de dados com sucesso,");
+        }
+
+    }
 
     // Visualizar o banco de dados de usuários
     public void visualizarBancoDeDadosUsuario() {
