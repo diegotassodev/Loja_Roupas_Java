@@ -20,8 +20,8 @@ public class Login extends JPanel {
         setLayout(new MigLayout("fill,insets 20", "[center]", "[center]"));
         txtUsername = new JTextField();
         txtPassword = new JPasswordField();
-        chRememberMe = new JCheckBox("Remember me");
-        cmdLogin = new JButton("Login");
+        chRememberMe = new JCheckBox("Lembrar do usuário?");
+        cmdLogin = new JButton("Logar");
         JPanel panel = new JPanel(new MigLayout("wrap,fillx,insets 35 45 35 45", "fill,250:280"));
         panel.putClientProperty(FlatClientProperties.STYLE, ""
                 + "arc:20;"
@@ -42,11 +42,11 @@ public class Login extends JPanel {
             //  Do action login here
             Main.main.showMainForm();
         });
-        txtUsername.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "Enter your username or email");
-        txtPassword.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "Enter your password");
+        txtUsername.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "Entre com seu email...");
+        txtPassword.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "Entre com sua senha...");
 
-        JLabel lbTitle = new JLabel("Welcome back!");
-        JLabel description = new JLabel("Please sign in to access your account");
+        JLabel lbTitle = new JLabel("Loja de Roupas");
+        JLabel description = new JLabel("Logue para acessar a sua conta.");
         lbTitle.putClientProperty(FlatClientProperties.STYLE, ""
                 + "font:bold +10");
         description.putClientProperty(FlatClientProperties.STYLE, ""
@@ -55,9 +55,9 @@ public class Login extends JPanel {
 
         panel.add(lbTitle);
         panel.add(description);
-        panel.add(new JLabel("Username"), "gapy 8");
+        panel.add(new JLabel("Email"), "gapy 8");
         panel.add(txtUsername);
-        panel.add(new JLabel("Password"), "gapy 8");
+        panel.add(new JLabel("Senha"), "gapy 8");
         panel.add(txtPassword);
         panel.add(chRememberMe, "grow 0");
         panel.add(cmdLogin, "gapy 10");

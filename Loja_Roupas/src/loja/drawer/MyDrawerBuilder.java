@@ -1,7 +1,7 @@
 package loja.drawer;
 
 import java.net.URL;
-import loja.abas.administrativas.TabelaUsuarios;
+import loja.abas.administrativas.TabelaClientes;
 import raven.drawer.component.SimpleDrawerBuilder;
 import raven.drawer.component.footer.SimpleFooterData;
 import raven.drawer.component.header.SimpleHeaderData;
@@ -53,7 +53,7 @@ public class MyDrawerBuilder extends SimpleDrawerBuilder {
                         
                         // No caso da seleção da opção "Tabela de Usuários", ele abre a tabela de usuários.
                         if (index == 1) {
-                            WindowsTabbed.getInstance().addTab("Tabela de Usuários", new TabelaUsuarios());
+                            WindowsTabbed.getInstance().addTab("Tabela de Usuários", new TabelaClientes());
                         } 
                         
                         // No caso da opção de Logout, ele retorna para o formulário de Login.
